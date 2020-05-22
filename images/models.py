@@ -6,6 +6,9 @@ class Location(models.Model):
     def __str__(self):
         return self.location
 
+    def save_location(self):
+        self.save()    
+
 class Category(models.Model):
     category = models.CharField(max_length = 40)
 
@@ -13,7 +16,7 @@ class Category(models.Model):
         return self.category
 
 class Image(models.Model):
-   
+    image = models.ImageField(upload_to='saved/',null=True)
     image_name = models.CharField(max_length = 60)
     image_description = models.TextField (max_length = 500)
     image_location = models.ForeignKey(Location,on_delete=models.CASCADE)
