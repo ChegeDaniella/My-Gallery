@@ -1,0 +1,8 @@
+p {
+    color: pink;
+}
+body {
+    background: url('/static/img/cover.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

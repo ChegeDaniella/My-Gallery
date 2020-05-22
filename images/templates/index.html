@@ -1,1 +1,19 @@
-<p>New page</p>
+{% extends 'all-images/base.html'%}
+{% load static %}
+{% load bootstrap3 %}
+<!--navigation bar-->
+{%include 'navbar.html'%}
+<!-- styles-->
+{%block styles %}
+{%bootstrap_css%}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %} 
+<!-- displayed content-->
+
+{% block content %}
+<body>
+    <p class="text-center">New page</p>  
+    ertyuikjbvcxdfrtyhjk 
+</body>
+
+{% endblock %}
