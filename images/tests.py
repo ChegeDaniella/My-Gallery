@@ -11,6 +11,16 @@ class LocationTestClass(TestCase):
     def test_save_location(self):
         self.new_location.save_location()    
 
+class CategoryTestClass(TestCase):
+    def setUp(self):
+        self.new_category=Category(category="food")
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.new_category,Category))
+
+    def test_save_category(self):
+        self.new_category.save_category()            
+
 class ImageTestClass(TestCase):
     def setUp(self):
         self.new_location=Location(location="place")
