@@ -5,7 +5,12 @@ from django.conf.urls.static import static
 
 urlpatterns=[
     url('^$',views.index,name = "home_welcome"),
-    url('^saved/$',views.firstImages,name="saved_images")
+    url('^saved/$',views.anime,name="anime_images"),
+    url('^malawi/$',views.malawi,name="malawi"),
+    url('^heaven/$',views.heaven,name="heaven"),
+    url('^europe/$',views.malawi,name="europe"),
+    url('^mountains/$',views.malawi,name="mountains"),
+    url('^africa/$',views.malawi,name="africa"),
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

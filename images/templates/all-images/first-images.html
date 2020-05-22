@@ -6,7 +6,41 @@
 <div class="container">
     
     <div class="row">
-        {{name}}
+        {% for see_image in SeeImage %}
+        {{see_image.image_name}}
+        {% endfor %}
+        {% for posts in post %}
+       
+       {% if posts.image %}
+       <!--click image for details-->
+       <img data-toggle="modal" data-target="#exampleModalCenter" src="{{posts.image.url}}" class="img-responsive" alt="Image">
+       </div>
+       {%else%}
+       <h1>This article does not have an image</h1>
+       {%endif%} 
+    
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">{{posts.image_name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {{posts.image_description}}<br>
+          Category:{{posts.image_category}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+        </div>
+      </div>
     </div>
+  </div>
+    </div>
+    {% endfor %}
 </div>
 {% endblock%}

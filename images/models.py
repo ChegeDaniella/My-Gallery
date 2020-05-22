@@ -12,6 +12,9 @@ class Location(models.Model):
 class Category(models.Model):
     category = models.CharField(max_length = 40)
 
+    def save_category(self):
+        self.save()
+
     def __str__(self):
         return self.category
 
@@ -36,6 +39,11 @@ class Image(models.Model):
 
     def update_image(self):
         self.objects.filter(id).update()
+
+    def get_image_by_id(self,id):
+        post = self.objects.get(pk=id)
+        return post
+
 
 
 
