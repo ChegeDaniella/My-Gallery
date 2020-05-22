@@ -25,6 +25,16 @@ class Image(models.Model):
     class Meta:
         ordering = ['image_name']  
 
+    def save_image(self):
+        self.save() 
+
+    def delete_image(self):
+        self.objects.filter(id).delete()
+
+    def update_image(self):
+        self.objects.filter(id).update()
+
+
 
 
 
