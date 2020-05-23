@@ -36,6 +36,7 @@ class Image(models.Model):
 
     def delete_image(self):
         self.delete()
+        
 
     def update_image(self):
         self.objects.filter(id).update()
@@ -45,8 +46,8 @@ class Image(models.Model):
         return post
 
     @classmethod
-    def search_image(cls,category):
-        posts = cls.objects.filter(image_category__icontains=category)
+    def search_by_category(cls,search_term):
+        posts = cls.objects.filter(image_category__icontains=search_term)
         return posts    
 
 

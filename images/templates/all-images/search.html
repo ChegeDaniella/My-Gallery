@@ -1,0 +1,20 @@
+{% extends 'all-images/base.html'%}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% if postss %}
+            <h2>Found {{postss|length}} of search term {{message}}</h2>
+        {%else %}
+        <h2>Found 0 categories for the search</h2>   
+        {% endif%} 
+
+    {% if postss %}
+    {%for post in postss%}
+    <h1>{{post.image_name}}</h1>
+    {%endfor%}
+    {%endif%}
+    </div>
+</div>
+
+{% endblock %}

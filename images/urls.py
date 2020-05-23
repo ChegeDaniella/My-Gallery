@@ -11,6 +11,7 @@ urlpatterns=[
     url('^europe/$',views.malawi,name="europe"),
     url('^mountains/$',views.malawi,name="mountains"),
     url('^africa/$',views.malawi,name="africa"),
+    url('^search/$',views.search_results,name="search_results"),
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

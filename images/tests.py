@@ -40,9 +40,18 @@ class ImageTestClass(TestCase):
         Location.objects.all().delete() 
         Category.objects.all().delete()   
 
+    def test_save_image(self):
+        self.new_image.save_image()
+        image = Image.objects.all()
+        self.assertTrue(len(image)>0)    
+
     def test_delete_image(self):
-        image = self.new_image.objects.get(id = int(image_id))
-        image.delete_image()
+        self.new_image.save_image()
+        self.new_image.delete_image()
+        image = Image.objects.all()
+        self.assertTrue(len(image) == 0)
+
+        
           
 
 

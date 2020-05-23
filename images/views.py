@@ -43,7 +43,20 @@ def africa(request):
     context ={
         "post":image
     }
-    return render(request,'all-images/first-images.html',context)       
+    return render(request,'all-images/first-images.html',context)     
+
+def search_results(request):
+
+    if 'post_image' in request.GET and request.GET["post_image"]:
+        search_term = request.GET.get("post_image")
+        searched_images = Image.search_by_category(search_term)
+        message = f"{search_term}"
+
+        return render(request,'all-images/search.html',{"message":message,"postss":searched_images})
+    else:
+        message ="You haven't searched for anything"
+        return render(request,'all-images/search.html',{'message':message})
+
 
 
  
