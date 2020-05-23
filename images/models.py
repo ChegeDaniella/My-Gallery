@@ -44,6 +44,11 @@ class Image(models.Model):
         post = self.objects.get(pk=id)
         return post
 
+    @classmethod
+    def search_image(cls,category):
+        posts = cls.objects.filter(image_category__icontains=category)
+        return posts    
+
 
 
 
