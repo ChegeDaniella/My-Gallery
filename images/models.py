@@ -35,7 +35,7 @@ class Image(models.Model):
         self.save() 
 
     def delete_image(self):
-        self.objects.filter(id).delete()
+        self.delete()
 
     def update_image(self):
         self.objects.filter(id).update()

@@ -40,4 +40,9 @@ class ImageTestClass(TestCase):
         Location.objects.all().delete() 
         Category.objects.all().delete()   
 
+    def test_delete_image(self):
+        image = self.new_image.objects.get(id = int(image_id))
+        image.delete_image()
+          
+
 
