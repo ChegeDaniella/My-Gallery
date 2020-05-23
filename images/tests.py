@@ -51,6 +51,19 @@ class ImageTestClass(TestCase):
         image = Image.objects.all()
         self.assertTrue(len(image) == 0)
 
+    def test_update_image(self):
+        update= Image.update_image(self.new_image.image_name,"new name")
+        self.assertEqual(update.image_name,"new name")
+
+    def test_filter_by_location(self):
+        location = self.new_image.image_location
+        find = self.new_image.filter_by_location(location) 
+        self.assertTrue(location = find) 
+          
+    # def test_search_by _category(self):
+
+
+
         
           
 

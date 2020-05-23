@@ -5,10 +5,13 @@ from .models import Image
 def index(request):
     return render(request,'index.html')
 
-def anime(request):
-    SeeImage = Image.objects.all()
-    args={"SeeImage" : SeeImage}
-    return render(request,'all-images/first-images.html',args) 
+# def anime(request):
+#     SeeImage = Image.objects.all()
+#     args={"SeeImage" : SeeImage}
+#     return render(request,'all-images/first-images.html',args) 
+def gallery(request):
+    return render(request,'gallery.html')
+
 
 def malawi(request):
     image = Image.objects.filter(image_location_id="1")

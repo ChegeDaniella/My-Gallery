@@ -1,0 +1,31 @@
+{% extends 'all-images/base.html'%}
+{% load static %}
+{% load bootstrap3 %}
+
+<!--navigation bar-->
+{%include 'navbar.html'%}
+<!--<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">-->
+<!--styles-->
+{%block styles %}
+{%bootstrap_css%}
+
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+{% endblock %} 
+<!-- displaying content on page-->
+{%block content%}
+<div class="container">
+    <div class="image-gallery">
+        <a href="static/img/black-woman.jpg" class="img-1"></a>
+        sdfghj
+            
+    </div>
+</div>
+
+{%endblock%}
+
+<!--scripts-->
+{% block scripts %}
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% bootstrap_javascript %}
+{% endblock %}
