@@ -6,11 +6,9 @@
 <div class="container">
     
     <div class="row">
-        {% for see_image in SeeImage %}
-        {{see_image.image_name}}
-        {% endfor %}
-        {% for posts in post %}
-       
+      {% for posts in post %}
+      {{posts.image_name}}
+      {{posts.image_description}}
        {% if posts.image %}
        <!--click image for details-->
        <img data-toggle="modal" data-target="#exampleModalCenter" src="{{posts.image.url}}" class="img-responsive" alt="Image">

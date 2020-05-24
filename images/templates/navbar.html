@@ -7,8 +7,11 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'home_welcome' %}">The Moringa Tribune</a>
+            <a class="navbar-brand" href="{% url 'home_welcome' %}">The Gallery</a>
           </div>
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'gallery'%}"><i class="glyphicon glyphicon-picture"></i>Gallery</a></li>
+          </ul>
           <!-- Adding a search form  -->
       <div class="col-sm-4 col-md-4 navbar-right">
 

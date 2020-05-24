@@ -12,14 +12,6 @@ def index(request):
 def gallery(request):
     return render(request,'gallery.html')
 
-
-def malawi(request):
-    image = Image.objects.filter(image_location_id="1")
-    context ={
-        "post":image
-    }
-    return render(request,'all-images/first-images.html',context)  
-
 def heaven(request):
     image = Image.objects.filter(image_location_id="2")
     context ={
