@@ -13,12 +13,14 @@ You can be able to clone and run the application on your local machine.
 Some of the thngs and extensions you will need to download so that your application can be able to run locally are
 
 '''
+
 Python
 Django
 Django-bootstrap3
 pylint
 psycopg2
 pillow
+
 '''
 
 ### Installing
