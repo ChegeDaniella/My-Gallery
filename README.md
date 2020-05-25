@@ -67,18 +67,18 @@ In the application we have 3 class test models which go hand in hand with the mo
         def test_save_location(self):
                 self.new_location.save_location() 
 ```
-
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 This test is for testing whether a location attribute can be saved.
 
 
 ## Deployment
 
-You can look at the [Deployment]() Document for you to be able to deploy this application on heroku
+You can look at the [Deployment](https://gist.github.com/newtonkiragu/42f2500e56d9c2375a087233587eddd0) Document for you to be able to deploy this application on heroku
 
 ## Built with 
-* [Python]() This is the language used
-* [Django]() The web framework used
-* [SQLprogest]() The database that has been used
+* [Python](https://docs.python.org/release/3.6.9/tutorial/index.html) This is the language used
+* [Django](https://docs.djangoproject.com/en/3.0/) The web framework used
+* [SQLprogest](https://docs.djangoproject.com/en/3.0/topics/db/sql/) The database that has been used.The link is specific to the django frame work.
 
 ## Author
 
