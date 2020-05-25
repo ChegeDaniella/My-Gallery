@@ -66,8 +66,8 @@ We run tests to ensure that the of the functions and models we use are doing wha
 In the application we have 3 class test models which go hand in hand with the models in our database.Each model has a save test function.An example
 
 '''
- def test_save_location(self):
-        self.new_location.save_location() 
+        def test_save_location(self):
+                self.new_location.save_location() 
 '''
 
 This test is for testing whether a location attribute can be saved.
