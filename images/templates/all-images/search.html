@@ -1,6 +1,16 @@
 {% extends 'all-images/base.html'%}
-
+<head>
+<style>
+    body {
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/746/391/731/green-minimal-dark-light-wallpaper-preview.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+</head>
+<body>
 {% block content %}
+
 <div class="container">
     <div class="row">
         {% if postss %}
@@ -9,12 +19,20 @@
         <h2>Found 0 categories for the search</h2>   
         {% endif%} 
 
-    {% if postss %}
+   
     {%for post in postss%}
     <h1>{{post.image_name}}</h1>
-    {%endfor%}
+    
+    {% if post.image %}
+    <img src="{{post.image.url}}" class="img-responsive">
+    {%else%}
+    <h1>This post does not have an image</h1>
     {%endif%}
+    <h4>{{post.image_description}}</h4>
+    {%endfor%}
+    
     </div>
 </div>
 
 {% endblock %}
+</body>

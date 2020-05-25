@@ -1,0 +1,27 @@
+body {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/746/391/731/green-minimal-dark-light-wallpaper-preview.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img {
+    width: 500px;
+    height: 260px;
+    border:1px solid #ffffff;
+    border-width: thick;
+}
+p {
+    text-align: center;
+    opacity: 0.5;
+    background: #ffffff;
+}
+#zoom {
+    transition: transform .2s;
+}
+#zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+h1 {
+    text-align: center;
+}

@@ -1,44 +1,98 @@
 {% extends 'all-images/base.html'%}
+{% load static %}
+{% load bootstrap3 %}
 
-{% block content %}
-{{block.super}}
+<!--navigation bar-->
+{%include 'navbar.html'%}
+<!--<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">-->
+<!--styles-->
+{%block styles %}
+{%bootstrap_css%}
+<link rel="stylesheet" href="{% static 'css/first-image.css' %}">
+{% endblock %}
 
-<div class="container">
-    
-    <div class="row">
+<body>
+  {% block content %}
+  {{block.super}}
+
+  <div class="container">
+   <div class="row">
+    <div class="loc">
+        <div class="col-md-6" >
+          
+      <h1>LOCATION</h1>
+      <p>
+        so this village is still here<br>
+        here without change<br>
+        and if i stay here any longer<br>
+        i am already<br>
+        where i shall always be<br>
+        here without change.<br>
+        in this village still here.<br>
+        some things remain<br>
+        some things pass,<br>
+        some things are tired<br>
+        bicycles arriving<br>
+        cleaned bicycles departing.<br>
+        and if today<br>
+        not many people are arriving<br>
+        do not change the day<br>
+        to bring in yesterday<br>
+        riding an old identity<br>
+        which, anywhere,<br>
+        has come and gone<br>
+        every year ago.<br>
+        and if you see a bicycle<br>
+        leaning on the grass<br>
+        neither tired or cleaned<br>
+        then it is just resting<br>
+        sufficiently<br>
+        to make no sense at all</p>
+      </div>
+    </div>
       {% for posts in post %}
-      {{posts.image_name}}
-      {{posts.image_description}}
-       {% if posts.image %}
-       <!--click image for details-->
-       <img data-toggle="modal" data-target="#exampleModalCenter" src="{{posts.image.url}}" class="img-responsive" alt="Image">
-       </div>
-       {%else%}
-       <h1>This article does not have an image</h1>
-       {%endif%} 
-    
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">{{posts.image_name}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          {{posts.image_description}}<br>
-          Category:{{posts.image_category}}
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+      {% if posts.image %}
+      <!--click image for details-->
+      <h2>{{posts.image_name}}</h2>
+      <img style="height:350px ;width:500px;"  data-toggle="modal" id="zoom" data-target="#exampleModalCenter" src="{{posts.image.url}}" class="img-responsive"
+        alt="Image">
+  
+    {%else%}
+    <h1>This post does not have an image</h1>
+    {%endif%}
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLongTitle">{{posts.image_name}}</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Description:{{posts.image_description}}<br>
+            Category:{{posts.image_category}}<br>
+            Location: {{posts.image_location}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+          </div>
         </div>
       </div>
     </div>
   </div>
-    </div>
-    {% endfor %}
-</div>
-{% endblock%}
+
+ 
+ 
+  
+
+
+
+  {% endfor %}
+  </div>
+  {% endblock%}
+</body>
