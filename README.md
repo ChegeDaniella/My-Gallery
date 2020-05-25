@@ -43,6 +43,8 @@ Ensure that you have installed all the extensions mentioned above in the envirom
 
 After installation the application should be able to render from the local host.On the terminal run command
 
+![Rendered image](static/img/home.png)
+
 ```
 python3.6 manage.py runserver
 ```
@@ -67,7 +69,7 @@ In the application we have 3 class test models which go hand in hand with the mo
         def test_save_location(self):
                 self.new_location.save_location() 
 ```
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 This test is for testing whether a location attribute can be saved.
 
 
