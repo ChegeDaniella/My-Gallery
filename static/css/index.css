@@ -5,6 +5,10 @@ body {
    background-size: cover;
     color: #fff;
 }
+.top {
+    color: black;
+    text-align: center;
+}
 
 .xop-section {
     max-width: 960px;
