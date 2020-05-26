@@ -33,9 +33,9 @@ DEBUG=TRUE
 Then you should create an enviroment in your folder which will be able to hold all the extensions yoou are going to be adding
 The commands for this are:
 
-```
-python3.6 -m venv --without-pip virtual
-$ curl https://bootstrap.pypa.io/get-pip.py | python
+```shell script
+python3 -m venv --without-pip virtual
+curl https://bootstrap.pypa.io/get-pip.py | python
 source virtual/bin/activate
 ```
 
@@ -84,6 +84,8 @@ You can look at the [Deployment](https://gist.github.com/newtonkiragu/42f2500e56
 
 ## Author
 
-Daniella Wangechi
+Daniella Wangechi chege
 
+## Liscense
+[Lisence](/GALLARY/License)
 
