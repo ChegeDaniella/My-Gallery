@@ -26,8 +26,8 @@ MODE=config("MODE", default="dev")
 # SECRET_KEY = '+lw)35z&&f#s_w-rm@m&z-brp=hi*iu&&8qgbn14g_fe&it3kq'
 SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
+# DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = []
 
 
@@ -80,28 +80,6 @@ WSGI_APPLICATION = 'gallary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if config('MODE') =="dev":
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME' : 'tribune',
-            'USER' : 'daniella',
-            'PASSWORD' : '1234',
-            'HOST' : config('DB_HOST'),
-            'PORT' : '',
-        }    
-    }
-else:
-    DATABASES={
-        'default':dj_database_url.config(
-            default=config('DATABASE_URL')
-        )
-    } 
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # development
 if config('MODE')=="dev":
