@@ -1,0 +1,73 @@
+{% extends 'all-images/base.html'%}
+{% load static %}
+{% load bootstrap3 %}
+<!--navigation bar-->
+{%include 'navbar.html'%}
+<!-- styles-->
+{%block styles %}
+{%bootstrap_css%}
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %} 
+<!-- displayed content-->
+
+{% block content %}
+<body>
+    <h1 style="text-align: center; font-size:70px">The Gallery</h1>
+    <div class="top" style="color: black; text-align:center; font-size:20px">
+        The Gallery is a site where you can be able to get a variation of images with description and categories.<br>
+        Some of the categories that have been provided and you can be able to search through are
+        <ul>
+            Food <br>
+            Anime<br>
+            art<br>
+            People
+
+        </ul>
+        Click on the locations below to see locations with there images
+    </div>
+    <div class="xop-section">
+        <ul class="xop-grid">
+            <li>
+                <div class="xop-box xop-img-1">
+                    <a href="{% url 'mountains' %}">
+                        <h3>Mountains</h3>
+                        <p>Mountains are a calm and peaceful place to be.The fresh air is cleansing and also freeing from busy towns.A sense of peace comes when you you are one with nature.</p>
+                    </a>
+
+                </div>
+            </li>
+            <li>
+                <div class="xop-box xop-img-2">
+                    <a href="{% url 'heaven' %}">
+                        <h3>Heaven</h3>
+                        <p>Heaven can be theoretical or real place according to your belief but what we all know is that heaven is different for all of us.You can be able to share with us some of the places you consider to be your heaven and also see more.</p>
+                    </a>
+
+                </div>
+            </li>
+            <li>
+                <div class="xop-box xop-img-3">
+                    <a href="{% url 'europe' %}">
+                        <h3>Europe</h3>
+                        <p>Europe is a continent which has many beautiful places aand people.Some of the practises done there are different from other contnents. This makes it a place where you will never get bored while discovering new places.</p>
+                    </a>
+
+                </div>
+            </li>
+            <li>
+                <div class="xop-box xop-img-4">
+                    <a href="{% url 'africa'%}">
+                        <h3>Africa</h3>
+                        <p>The cradle of man kind as it is called.The continent holds alot of memory from the past and we continue understanding ourselves more and more.They are rich in culture and heritage. </p>
+                    </a>
+
+                </div>
+            </li>
+
+        </ul>
+    </div> 
+    
+</body>
+
+{% endblock %}

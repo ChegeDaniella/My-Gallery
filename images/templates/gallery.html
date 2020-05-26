@@ -1,0 +1,106 @@
+{% extends 'all-images/base.html'%}
+{% load static %}
+{% load bootstrap3 %}
+
+<!--navigation bar-->
+{%include 'navbar.html'%}
+<!--<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">-->
+<!--styles-->
+{%block styles %}
+{%bootstrap_css%}
+
+<link rel="stylesheet" href="{% static 'css/gallary.css' %}">
+{% endblock %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{%block content%}
+<h1>My Gallery's Gallery</h1>
+<div class="container">
+    <div class="gallery-container w-3 h-2">
+        <div class="gallery-item">
+            <div class="image">
+                <img src="http://source.unsplash.com/900x400/?people" alt="people">
+            </div>
+            <div class="text">People</div>
+        </div>
+    </div>
+    <div class="gallery-container w-2 h-3">
+        <div class="gallery-item">
+            <div class="image">
+                <img src="http://source.unsplash.com/1600x900/?nature" alt="nature">
+            </div>
+            <div class="text">Nature</div>
+        </div>    
+    </div>
+    <div class="gallery-container w-1 h-2">
+        <div class="gallery-item">
+            <div class="image">
+                <img src="http://source.unsplash.com/1600x900/?fitness" alt="fitness">
+            </div>
+            <div class="text">Fitness</div>
+        </div>    
+    </div>
+    <div class="gallery-container w-3 h-2">
+        <div class="gallery-item">
+            <div class="image">
+                <img src="http://source.unsplash.com/1600x900/?sports" alt="sports">
+            </div>
+            <div class="text">sports</div>
+        </div>    
+    </div>
+    <div class="gallery-container w-2 h-3">
+        <div class="gallery-item">
+            <div class="image">
+                <img src="http://source.unsplash.com/1600x900/?anime" alt="anime">
+            </div>
+            <div class="text">anime</div>
+        </div>    
+    </div>
+    <div class="gallery-container">
+            <div class="gallery-item">
+                <div class="image">
+                    <img src="http://source.unsplash.com/1600x900/?travel" alt="travel">
+                </div>
+                <div class="text">Travel</div>
+            </div>    
+        </div>
+    <div class="gallery-container w-4 h-2">
+            <div class="gallery-item">
+                <div class="image">
+                    <img src="http://source.unsplash.com/1600x900/?food" alt="food">
+                </div>
+                <div class="text">Food</div>
+            </div>    
+        </div>
+        <div class="gallery-container w-3 h-2">
+            <div class="gallery-item">
+                <div class="image">
+                    <img src="http://source.unsplash.com/1600x900/?art" alt="art">
+                </div>
+                <div class="text">Art</div>
+            </div>    
+        </div>
+</div>
+
+
+
+{%endblock%}
+    
+</body>
+</html>
+
+<!--scripts-->
+{% block scripts %}
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% bootstrap_javascript %}
+{% endblock %}
+
+
