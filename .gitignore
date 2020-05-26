@@ -1,1 +1,5 @@
 .env
+virtual/
+__pycache__/
+.idea
+*.pyc
