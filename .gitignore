@@ -3,3 +3,5 @@ virtual/
 __pycache__/
 .idea
 *.pyc
+gallary/__pycache__
+images/__pycache__
